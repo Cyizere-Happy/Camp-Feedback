@@ -2,6 +2,8 @@ import User from "../models/user";
 import { Request, Response } from "express";
 import bcrypt from "bcryptjs";
 import Role from '../models/role'; 
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 export const registerUser = async (req: Request, res: Response) => {
@@ -73,3 +75,11 @@ export const listUsers = async (req: Request, res: Response) => {
     return res.status(500).json({ status: 500, message: error instanceof Error ? error.message : "Unknown error" });
   }
 };
+
+export const logout = ()=>{
+    try {
+    
+    } catch (error) {
+        
+    }
+}

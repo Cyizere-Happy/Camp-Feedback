@@ -6,10 +6,10 @@ import { authenticate } from "../middlewares/authentication";
 
 const roleRoute = Router();
 
-roleRoute.post("/CreateRole", authenticate, checkRole('admin'), addRole ); 
-roleRoute.get('/listRole', authenticate, checkRole('admin'), listRoles)
-roleRoute.get('/getRoleById/:id', authenticate, checkRole('admin'), getRoleById)
-roleRoute.get('/updateRole/:id', authenticate, checkRole('admin'), updateRole)
-roleRoute.delete('/deleteRole/:id', authenticate, checkRole('admin'), deleteRole)
+roleRoute.post("/Role", authenticate, checkRole('admin'), addRole ); 
+roleRoute.get('/Role', authenticate, checkRole('admin'), listRoles)
+roleRoute.get('/Role/:id', authenticate, checkRole('admin'), getRoleById)
+roleRoute.put('/Role/:id', authenticate, checkRole('admin'), updateRole)
+roleRoute.delete('/Role/:id', authenticate, checkRole('admin'), deleteRole)
 
 export default roleRoute;

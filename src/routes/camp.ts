@@ -5,10 +5,10 @@ import { authenticate } from "../middlewares/authentication";
 
 const campRouter = Router()
 
-campRouter.post("/CreateCamp", authenticate, checkRole('admin'), addCamp ); 
-campRouter.get('/listCamp', authenticate, checkRole('admin'), listCamps)
-campRouter.get('/getCampById/:id', authenticate, checkRole('admin'), getCampById)
-campRouter.put('/updateCamp/:id', authenticate, checkRole('admin'), updateCamp)
-campRouter.delete('/deleteCamp/:id', authenticate, checkRole('admin'), deleteCamp)
+campRouter.post("/Camp", authenticate, checkRole('admin'), addCamp ); 
+campRouter.get('/Camp', authenticate, checkRole('admin'), listCamps)
+campRouter.get('/Camp/:id', authenticate, checkRole('admin'), getCampById)
+campRouter.put('/Camp/:id', authenticate, checkRole('admin'), updateCamp)
+campRouter.delete('/Camp/:id', authenticate, checkRole('admin'), deleteCamp)
 
 export default campRouter

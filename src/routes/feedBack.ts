@@ -5,8 +5,8 @@ import { checkRole } from "../middlewares/CheckRole";
 
 const FeedbackRouter = express.Router();
 
-FeedbackRouter.post("/addFeedBack", authenticate ,addFeedback);                
-FeedbackRouter.get("/ListFeedBack", authenticate, checkRole('admin') ,listFeedbacks);               
-FeedbackRouter.get("/List/camp/:campId", authenticate, checkRole('admin') ,getFeedbacksByCamp); 
+FeedbackRouter.post("/FeedBack", authenticate ,addFeedback);                
+FeedbackRouter.get("/FeedBack", authenticate, checkRole('admin') ,listFeedbacks);               
+FeedbackRouter.get("/FeedBack/camp/:campId", authenticate, checkRole('admin') ,getFeedbacksByCamp); 
 
 export default FeedbackRouter;

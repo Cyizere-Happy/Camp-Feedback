@@ -32,7 +32,7 @@ export const checkRole = (requiredRole: string) => {
       }
 
       if (userRoleName !== requiredRole) {
-        return res.status(403).json({ message: 'Access denied: Insufficient role' });
+        return res.status(403).json({ message: 'Access denied' });
       }
 
       // Attach user to request object
