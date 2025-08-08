@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import role from "./role";
 const userSchema = new mongoose.Schema({
     fullName: {
         type: String, required: [true, "Please provide your name"]
@@ -10,10 +11,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "Password is required"]
     },
-    role: {
-        enum: ["Admin", "User"],
-        type: String, required: [true, "Please provide your role"],
-        default: "User"
+    role_Id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'role',
+        required: true
     }
 })
 

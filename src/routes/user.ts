@@ -1,7 +1,7 @@
 import { Router } from "express";
 import passport from "passport";
 import { registerUser } from "../controller/userController";
-import { login, getUserProfile } from "../controller/authController";
+import { login, getUserProfile, adminRoute, userRoute } from "../controller/authController";
 
 const router = Router();
 
