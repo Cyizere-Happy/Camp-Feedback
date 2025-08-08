@@ -64,3 +64,12 @@ export const adminRoute = (req: Request, res: Response) => {
 export const userRoute = (req: Request, res: Response) => {
   res.json({ message: 'Hello user!!', user: req.user });
 };
+
+export const listUsers = async (req: Request, res: Response) => {
+  try {
+    const users = await User.find();
+    return res.status(200).json({ status: 200, users });
+  } catch (error) {
+    return res.status(500).json({ status: 500, message: error instanceof Error ? error.message : "Unknown error" });
+  }
+};
